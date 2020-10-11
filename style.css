@@ -1,0 +1,29 @@
+/* Author: Armando Fernandez
+   Date: 10/11/2020
+   Version: 1.0
+Font Notes: font-family: 'Bungee', cursive;
+font-family: 'Press Start 2P', cursive
+*/
+
+#tetris {
+  border: 5px solid black;
+  border-radius: 5px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.container {
+  background-color: aqua;
+}
+
+#score {
+  font-family: "Press Start 2P";
+}
+
+#gameTitle {
+  font-family: "Bungee";
+}
+
+body {
+  background-color: rgb(30, 30, 30);
+}

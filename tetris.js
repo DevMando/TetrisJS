@@ -36,7 +36,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 function updateScore() {
-  document.getElementById("score").innerText = player.score;
+  document.getElementById("score").innerText = `Score: ${player.score}`;
 }
 
 function arenaSweep() {
@@ -53,15 +53,16 @@ function arenaSweep() {
 
     player.score += rowCount * 10;
     rowCount *= 2;
+    animateCSS('#tetris', 'headShake');
   }
 }
 
 function createColors() {
-  return [null, "red", "blue", "violet", "green", "purple", "orange", "pink"];
+  return [null, "yellow", "blue", "purple", "orange", "cyan", "green", "red"];
 }
 
 function getRandomPiece() {
-  const letters = ["T", "O", "L", "J", "Z", "S"];
+  const letters = ["T", "O", "L", "J", "Z", "S", "I"];
   return letters[Math.floor(Math.random() * letters.length)];
 }
 
@@ -108,6 +109,13 @@ function createPiece(letter) {
         [6, 6, 0],
       ];
       break;
+      case "I":
+        return [
+          [7, 0, 0],
+          [7, 0, 0],
+          [7, 0, 0],
+        ];
+        break;
   }
 }
 
@@ -234,3 +242,20 @@ function drawMatrix(matrix, offset, context) {
     });
   });
 }
+
+const animateCSS = (element, animation, prefix = 'animate__') =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd() {
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve('Animation ended');
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+  });
