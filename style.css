@@ -6,7 +6,7 @@ font-family: 'Press Start 2P', cursive
 */
 
 #tetris {
-  border: 5px solid black;
+  border: 5px solid white;
   border-radius: 5px;
   margin-left: 30%;
   margin-right: 30%;

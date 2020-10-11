@@ -53,7 +53,7 @@ function arenaSweep() {
 
     player.score += rowCount * 10;
     rowCount *= 2;
-    animateCSS('#tetris', 'headShake');
+    animateCanvas('#tetris', 'headShake');
   }
 }
 
@@ -169,14 +169,22 @@ function playerDrop() {
 }
 
 function playerReset() {
+  generateNewPiece();
+  checkPlayerLoses();
+}
+
+function generateNewPiece(){
   player.matrix = createPiece(getRandomPiece());
   player.pos.y = 0;
   player.pos.x =
     ((arena[0].length / 2) | 0) - ((player.matrix[0].length / 2) | 0);
+}
 
+function checkPlayerLoses(){
   if (collide(arena, player)) {
     arena.forEach((row) => row.fill(0));
     player.score = 0;
+    animateCanvas('#tetris', 'wobble');
   }
 }
 
@@ -243,7 +251,7 @@ function drawMatrix(matrix, offset, context) {
   });
 }
 
-const animateCSS = (element, animation, prefix = 'animate__') =>
+const animateCanvas = (element, animation, prefix = 'animate__') =>
   // We create a Promise and return it
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
