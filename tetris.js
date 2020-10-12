@@ -36,7 +36,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 function updateScore() {
-  document.getElementById("score").innerText = `Score: ${player.score}`;
+  document.getElementById("score").innerText = player.score;
 }
 
 function arenaSweep() {

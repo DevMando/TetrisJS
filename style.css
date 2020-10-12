@@ -13,17 +13,50 @@ font-family: 'Press Start 2P', cursive
 }
 
 .container {
-  background-color: aqua;
+  background-color: rgb(101, 53, 164);
 }
 
 #score {
   font-family: "Press Start 2P";
+  color: white;
 }
 
 #gameTitle {
   font-family: "Bungee";
+  color: black;
+}
+
+#scoreLabel {
+  font-family: "Press Start 2P";
+  color: white;
 }
 
 body {
   background-color: rgb(30, 30, 30);
+}
+
+.rotateButtons {
+  margin-left: 10px;
+}
+
+.midbg {
+  background-image: url("bg.jpeg");
+  border-radius: 10px;
+}
+
+.controller-title {
+  color: white;
+  font-family: "Bungee";
+  padding-top: 15px;
+}
+.controller {
+  background-color: black;
+}
+.rotate {
+  float: right;
+  margin: 7px;
+}
+
+.drop {
+  margin-top: 30px;
 }

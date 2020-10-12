@@ -23,13 +23,25 @@
   <body>
     <div class="container">
       <h1 id="gameTitle">Tetris JS!</h1>
-      <p id="score"></p>
+      <p id="scoreLabel">Score: <span id="score"></span></p>
       <div class="row">
         <div class="col-2"></div>
-        <div class="col-8" style="background-color: red;">
+        <div class="col-8 midbg">
           <canvas id="tetris" width="240" height="400"></canvas>
         </div>
         <div class="col-2"></div>
+      </div>
+      <div class="row controller">
+        <h3 class="col col-sm-12 controller-title">Controls</h3>
+      </div>
+      <div class="row controller">
+        <div class="col col-sm-12">
+            <input onClick="playerMove(-1)" class="btn btn-success" type="button" value="Left">
+            <input onClick="playerDrop()" class="btn btn-danger drop" type="button" value="Drop">
+            <input onClick="playerMove(+1)" class="btn btn-warning" type="button" value="Right">
+              <input onClick="playerRotate(-1)" class="btn btn-primary rotate" type="button" value="Rotate  Left">
+              <input onClick="playerRotate(+1)" class="btn btn-info rotate" type="button" value="Rotate Right">
+          </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
