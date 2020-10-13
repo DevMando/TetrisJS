@@ -1,3 +1,16 @@
+/*////////////////////////////////
+  Author: Armando Fernandez
+
+  Date: 10/10/2020
+
+  Version: 1.0
+
+  Purpose: Purpose of this project - To create a game outside of the
+  Unity Engine, and use another languate other than C#. In this case
+  mainly JavaScript, with some help from HTML, CSS and the Bootstrap & 
+  Animate css frameworks.
+*////////////////
+
 const canvas = document.getElementById("tetris"),
   context = canvas.getContext("2d");
 context.scale(20, 20);
