@@ -32,16 +32,27 @@
         <div class="col-2"></div>
       </div>
       <div class="row controller">
-        <h3 class="col col-sm-12 controller-title">Controls</h3>
+        <h3 class="col-12 controller-title center">Controls</h3>
+        <h3 class="col-12 controller-title">Buttons</h3>
       </div>
       <div class="row controller">
-        <div class="col col-sm-12">
+        <div class="col-12">
             <input onClick="playerMove(-1)" class="btn btn-success" type="button" value="Left">
             <input onClick="playerDrop()" class="btn btn-danger drop" type="button" value="Drop">
             <input onClick="playerMove(+1)" class="btn btn-warning" type="button" value="Right">
               <input onClick="playerRotate(-1)" class="btn btn-primary rotate" type="button" value="Rotate  Left">
               <input onClick="playerRotate(+1)" class="btn btn-info rotate" type="button" value="Rotate Right">
           </div>
+            <h3 class="col-12 controller-title">Keyboard</h3>
+            <p class= "col-12 keyboard-controls">
+              Left: <kbd>A</kbd> 
+              Right: <kbd>D</kbd>
+              Drop: <kbd>S</kbd>
+              <span class="rotate-buttons">
+                Rotate Left: <kbd>Q</kbd>
+                Rotate Right: <kbd>E</kbd>
+              </span>
+            </p>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
